@@ -1,0 +1,8 @@
+---
+- name: test
+  hosts: windows-servers
+  task:
+    - name: make Netlogon run
+      win_service:
+        name: Netlogon
+        state: started

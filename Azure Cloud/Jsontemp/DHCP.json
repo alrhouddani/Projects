@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "Windows10vm"
+        },
+        "location": {
+            "value": "germanywestcentral"
+        },
+        "fileUris": {
+            "value": "https://freevmex.blob.core.windows.net/freetst/Untitled1.ps1?sp=r&se=2022-01-09T04:16:37Z&sv=2020-08-04&sr=b&sig=r40%2Fl7wd2o35Ag364GtIIveUcK%2F2%2FiLYXoZR04NHX%2Fg%3D"
+        },
+        "arguments": {
+            "value": null
+        }
+    }
+}

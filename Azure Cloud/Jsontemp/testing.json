@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "vcodetest",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2020-11-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "managedby": "abdellahrhouddani"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.0.0.0/16"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "Subnet-1",
+                        "properties": {
+                            "addressPrefix": "10.0.0.0/24"
+                        }
+                    },
+                    {
+                        "name": "Subnet-2",
+                        "properties": {
+                            "addressPrefix": "10.0.1.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+   {
+       "name": "vcodetest",
+       "type": "Microsoft.Network/networkSecurityGroups",
+       "apiVersion": "2020-11-01",
+       "location": "[resourceGroup().location]",
+       "tags": {
+           "managedby": "abdellahrhouddani"
+       },
+       "properties": {
+           "securityRules": [
+               {
+                   "name": "nsgRule1",
+                   "properties": {
+                       "description": "description",
+                       "protocol": "TCP",
+                       "sourcePortRange": "*",
+                       "destinationPortRange": "3389",
+                       "sourceAddressPrefix": "*",
+                       "destinationAddressPrefix": "*",
+                       "access": "Allow",
+                       "priority": 100,
+                       "direction": "Inbound"
+                   }
+               }
+           ]
+       }
+   }
+    ],
+    "outputs": {}
+}

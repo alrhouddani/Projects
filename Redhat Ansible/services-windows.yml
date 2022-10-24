@@ -1,0 +1,4 @@
+- hosts: windows
+  name: Save the result of 'whoami' in 'whoami_out'
+  win_command: whoami
+  register: whoami_out

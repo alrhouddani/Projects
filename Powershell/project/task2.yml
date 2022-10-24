@@ -1,0 +1,6 @@
+---
+- hosts: ubuntu_servers
+  become: true
+  tasks:
+    - name: set date and time
+      shell: timedatectl set-timezone Europe/Warsaw

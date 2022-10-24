@@ -1,0 +1,8 @@
+---
+ansible_user: alrh
+ansible_password: Kilokoli123
+ansible_port: 5986
+ansible_connection: winrm
+ansible_winrm_transport: basic
+ansible_shell_type: powershell
+ansible_winrm_server_cert_validation: ignore

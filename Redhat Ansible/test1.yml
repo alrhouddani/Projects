@@ -1,0 +1,6 @@
+---
+- hosts: windows-servers
+  name: Execute Powershell from Ansible
+  task:
+    - name: run powershell
+      win_shell: get-service -name Netlogon | select-object name, status | Export-Csv -Path 'C:\Users\alrh\Desktop/ansible.txt'

@@ -1,0 +1,9 @@
+---
+- hosts: server
+  become: true
+  tasks:
+    - name: do a uname
+      shell: uname -a > /home/alrh/ansible/results.txt
+    - name: whoami
+      shell: whoami >> /home/alrh/ansible/results.txt
+#C:\Program Files\Python37

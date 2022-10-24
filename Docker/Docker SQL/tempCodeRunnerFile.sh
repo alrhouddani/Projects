@@ -1,0 +1,1 @@
+docker run -it --name ansible -v C:\Temp\ansible:/ansibledata debian

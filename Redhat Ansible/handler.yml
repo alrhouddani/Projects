@@ -1,0 +1,12 @@
+---
+- hosts: server
+  become: true
+  tasks:
+    - name: install vsftpd
+      apt: name=vsftpd update_cache=yes state=latest
+      ignore_errors: yes
+      notify: start vsftpd
+    - name: install docker.io
+      apt: name=docker.io update_cache=yes state=latest
+      ignore_errors: yes
+      notify: start docker

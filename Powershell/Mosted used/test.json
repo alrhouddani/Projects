@@ -1,0 +1,16 @@
+[
+{
+"index": 0,
+"price": 6300,
+"brand": "toyota",
+"model": "cruiser",
+"mileage": 274114
+},
+{
+"index": 1,
+"price": 5820,
+"brand": "ford",
+"model": "se",
+"mileage": 15635
+}
+]
