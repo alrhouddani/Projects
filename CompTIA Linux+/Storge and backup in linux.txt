@@ -1,0 +1,54 @@
+storage in linux
+Disk Partitions: MBR vs GPT
+MBR: Master boot record max 2TB no more then 4 Partitions: 
+GPT: GUID Partition Table 128 partitions
+Block Storage: Block storage is another name for what the Linux kernel calls a block device
+
+Commands for making Partitions:
+lsblk view all disks
+fdisk for MBR
+sudo fdisk --list /dev/nvme0n2 
+gdisk for GPT
+sudo gdisk -l /dev/nvme0n2
+parted disk utility tool
+sudo parted /dev/sda3
+Formatting and Filesystems:
+Ext4:Extended file system verion 4 The most popular default filesystem is Ext4
+sudo mkfs.ext4 /dev/nvme0n2p1
+sudo e2label /dev/nvme0n2p1 data
+XFS: specializes in performance and large data files. It formats quickly
+sudo mkfs.xfs /dev/nvme0n2p2
+sudo xfs_admin -L dataxfs /dev/nvme0n2p2
+Btrfs: is a modern, feature-rich copy-on-write filesystem. used in NAS (networked-attached storage)
+ZFS: is another copy-on-write filesystem and volume manager with a robust and mature feature set
+
+Logical Volume Manager: Creating single logical volumes of multiple physical volumes or entire hard disks
+Physical volumes: Physical disks attached to your server
+sudo pvscan
+sudo pvcreate /dev/nvme0n2p1 /dev/nvme0n2p2
+volume group: attached disks all group
+sudo vgcreate vg1 /dev/nvme0n2p1 /dev/nvme0n2p2
+sudo vgscan
+logical valumes:An allocation of storage that is less than or more than one physical drive
+sudo lvscan
+sudo lvcreate -L 3G vg1 -n lv1
+mirrorvg
+
+Backup
+Full Backup: A full backup is the most complete type of backup where you clone all the selected data.
+Differential Backup: A differential backup straddles the line between a full and an incremental backup. 
+ 	This type of backup involves backing up data that was created or changed since the last full backup
+Incremental Backup: The first backup in an incremental backup is a full backup. 
+ 	The succeeding backups will only store changes that were made to the previous backup.
+
+Tools to create backup
+tar: stands for tape archive, is used to create Archive and extract the Archive files. tar
+dar: DAR Disk archive. It can create backup/archive for full disk or a group of files
+scp: Secure Copy is a means of securley transferring files between two machines on a network. SCP uses SSH 
+SFTP:(Safe File Transfer Protocol) part of the SSH designed to securely transfer files between remote systems.
+rsync: Rsync is a command-line tool for copying files and directories between local and remote systems
+mirrorvg:it takes all the logical volumes on a given volume group and mirrors those logical volumes
+dd: is a command-line utility for Unix and Unix-like operating systems whose primary purpose is to convert and copy 
+	files
+
+

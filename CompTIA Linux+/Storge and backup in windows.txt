@@ -1,0 +1,85 @@
+disk and file systems
+A disk drive track is a circular path on the surface of a disk 
+Disk sector is a subdivision of a track on a magnetic disk or optical disc.
+cluster known in windows as allocation unit size
+more clusters means slow performance
+less clusters means faster performance
+
+Disk Partitions: MBR vs GPT
+--------------------------------------------------------------------
+	    :	MBR 		     :	 GPT
+partitype   : Stored in a boot sector:	stored with every partition
+parlimit    : 4 primary partition    : 128 primary partition
+volume size : up to 2TB		     : up to 18EB   
+Boot os	yes :Yes                     : with UEFI
+When to use : older systems	     : Whenever is possible
+----------------------------------------------------------------------
+#pwsh
+Get-Disk 
+Initialize-Disk 
+Get-Partition
+New-Partition
+Get-Volume
+Format-Volume 
+#CMD
+wmic logicaldisk get name
+diskpart list
+diskpart.exe 
+
+# create a VHD
+all partof the hyperv module
+Pwsh
+get-vhd
+new-vhd
+mount-vhd
+dismount-vhd
+CMD
+diskpart
+diskpart create vdisk
+file=c:\data.vhd maximum=15000
+diskpart "select vdisk file=c:\data.vhd". 
+then select data
+unmount
+diskpart detach data
+#configure a share 
+cmd
+net share 
+net share mysharedfolder=c:\shared
+Pwsh
+fs-fileserver feature must be installed
+new-smbshare
+get-smbshare
+#acces
+get-smbshareaccess
+grant-smbshareacces
+revoke-smbshareacces
+## configure storge pools
+physical layer works with local or direct disks
+
+Simple: like Raid0 no extra copies or Data resiliency good for high performance work load and data lost is 
+acceptable
+mirror: like raid1 needs provids resiliency withstand 2disk failers
+parity: like Raid5 good for backup or streaming media 
+Storage tiers u can mix the type of disk ssd with hhd 
+
+support for write-back cache it will act as a buffer 
+get-physicaldisk -canpool $true
+new-storagepool 
+new-virtualdisk
+##Advance storage feature 
+ISCSI Internet Small Computer Systems Interface 
+ISNS Internet Storage Name Service is a protocol that enables automated discovery and management of iSCSI devices on a TCP/IP storage network
+DCB: Data Center Bridging DCB is a suite of Institute of Electrical 
+	and Electronics Engineers (IEEE) standards that enable Converged Fabrics in the data center,
+	where storage, data networking, cluster IPC and management traffic all share the same Ethernet network
+FC: Fibre Channel is a layer 2 switching technology or cut through, with the protocol handled entirely in hardware.
+ 	The iSCSI protocol (SCSI mapped to TCP/IP) running on Ethernet is a layer 3 switching 
+	technology with the protocol handled in software, hardware
+watch ep 19
+## storage raplica: supports 
+DR: Disaster recovery is an organization’s method of regaining access and functionality to its IT infrastructure 
+	after events like a natural disaster, cyber attack, or even business disruptions
+RPO:Recovery Point Objective, is a measure of the maximum tolerable amount of data that the business can afford to lose during a disaster
+RTO: Recovery Time Objective (RTO) is the duration of time and a service level within which a business process must be restored 
+
+
