@@ -1,0 +1,46 @@
+TCP:3360 Transmission Control Protocol is a standard that defines how to establish and maintain a network conversation
+UDP: User datagram protocol (UDP) operates on top of the Internet Protocol (IP) to transmit datagrams over a network
+FTP:21 is a standard communication protocol used for the transfer files from a server to a client on a computer network
+SFTP:22 Secure File Transfer Protocol Secure File Transfer Protocol (SFTP) is a file protocol for transferring large 
+	files over the web. It builds on the File Transfer Protocol (FTP) and includes Secure Shell (SSH) security components.
+TFTP:69 TFTP Server is used for simple file transfer (typically for boot-loading remote devices).
+SSH: 22 The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network,
+	 services securely over an unsecured network.
+HTTPS:443 Hypertext Transfer Protocol Secure
+HTTP: 80  Hypertext Transfer Protocol
+DHCP: Dynamic Host Configuration Protocol UDP port 67
+DNS: The Domain Name System (DNS) port 53
+DDNS: Dynamic Domain Name System 
+Firewall: is a network security device that monitors and filters incoming and outgoing network traffic 
+LAN: A local area network (LAN) is a collection of devices connected together in one physical location, 
+	such as a building, office, or home.
+WAN:  wide area network is a large network of information that is not tied to a single location.
+WLAN: wireless local-area network is a group of colocated devices that form a network based on radio transmissions
+Virtual Adapter: A virtual network adapter is software that operates like a physical network adapter within the host
+Ports: A port is a virtual point where network connections start and end
+Port forwarding: allows computers or services in private networks to connect over the internet with other public or private
+Subnet mask: defines the range of IP addresses that can be used within a network or subnet
+subnet: subnet, or subnetwork, is a network inside a network. Subnets make networks more efficient.
+Gateway: gateway is a node (router) in a computer network, a key stopping point for data on its way to or from other networks
+POP: A point of presence (PoP) is a demarcation point, access point,
+	 or physical location at which two or more networks or communication devices share a connection.
+IMAP: Internet Messaging Access Protocol With IMAP accounts, messages are stored in a remote server
+SMTP: Simple Mail Transfer Protocol  it’s an application used by mail servers to send, receive 
+IPV4: Internet Protocol version 4  the underlying technology 
+	that makes it possible for us to connect our devices to the web
+IPV6: Internet Protocol version 6 to allow for more unique TCP/IP address identifiers to be created
+ARP: Address Resolution Protocol is a protocol or procedure that connects an ever-changing Internet Protocol (IP) 
+	address to a fixed physical machine address
+Router: is a device that connects two or more packet-switched networks or subnetworks devices
+Switch: networking hardware that connects devices on a computer network by using packet switching 
+NAT: Network address translation is a method of mapping an IP address space into another
+Bridge: is a computer networking device that creates a single, aggregate network from multiple communication
+Telnet a network protocol used to virtually access a computer and to provide a two-way, 
+	collaborative and text-based communication channel between two machines
+Proxy: an intermediary server, either software or hardware, the sits between an end user and a website
+NETSTAT
+Mac address: media access control address responsible for local identification and an IP address
+VPN: Virtual Private Network provides an encrypted/secure tunnel hides your IP address
+RAID: redundant array of independent disks is a virtual disk technology that combines multiple physical drives into one unit
+SAN: Storage Area Network is a specialized, high-speed network that provides network access to storage devices
+NAS: Network Attached Storage a file-level storage architecture that makes stored data more accessible to networked devices
