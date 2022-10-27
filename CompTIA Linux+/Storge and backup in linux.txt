@@ -3,7 +3,6 @@ Disk Partitions: MBR vs GPT
 MBR: Master boot record max 2TB no more then 4 Partitions: 
 GPT: GUID Partition Table 128 partitions
 Block Storage: Block storage is another name for what the Linux kernel calls a block device
-
 Commands for making Partitions:
 lsblk view all disks
 fdisk for MBR

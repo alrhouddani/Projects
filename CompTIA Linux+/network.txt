@@ -1,5 +1,7 @@
-TCP:3360 Transmission Control Protocol is a standard that defines how to establish and maintain a network conversation
-UDP: User datagram protocol (UDP) operates on top of the Internet Protocol (IP) to transmit datagrams over a network
+TCP:3360 Transmission Control Protocol is a standard that defines how to establish and maintain a network
+ conversation
+UDP: User datagram protocol (UDP) operates on top of the Internet Protocol (IP) to transmit datagrams over a 
+network
 FTP:21 is a standard communication protocol used for the transfer files from a server to a client on a computer network
 SFTP:22 Secure File Transfer Protocol Secure File Transfer Protocol (SFTP) is a file protocol for transferring large 
 	files over the web. It builds on the File Transfer Protocol (FTP) and includes Secure Shell (SSH) security components.
@@ -41,7 +43,10 @@ Proxy: an intermediary server, either software or hardware, the sits between an 
 NETSTAT
 Mac address: media access control address responsible for local identification and an IP address
 VPN: Virtual Private Network provides an encrypted/secure tunnel hides your IP address
-RAID: redundant array of independent disks is a virtual disk technology that combines multiple physical drives into one unit
+RAID: redundant array of independent disks is a virtual disk technology that combines multiple physical drives into 
+one unit
 SAN: Storage Area Network is a specialized, high-speed network that provides network access to storage devices
 NAS: Network Attached Storage a file-level storage architecture that makes stored data more accessible to networked devices
-Jbod: just a bunch of disks, is a type of multilevel configuration for disks. It refers to a collection of disks in a computer system or array combined as one logical volume
+Jbod: just a bunch of disks, is a type of multilevel configuration for disks. It refers to a collection of disks
+ in a computer system or array combined as one logical volume
+SMB is a network file sharing protocol that requires an open port on a computer port numbers 139 and 445. Port 139

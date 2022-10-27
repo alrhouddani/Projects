@@ -81,5 +81,23 @@ DR: Disaster recovery is an organization’s method of regaining access and func
 	after events like a natural disaster, cyber attack, or even business disruptions
 RPO:Recovery Point Objective, is a measure of the maximum tolerable amount of data that the business can afford to lose during a disaster
 RTO: Recovery Time Objective (RTO) is the duration of time and a service level within which a business process must be restored 
+##Data deduplication is a process that eliminates excessive copies of data and significantly decreases storage
+Data DDulication has to be installed 
+Storage Spaces Direct
+Storage Replica
+Failover Clustering : types cluster type single domain cluster, multi domain cluster, workgroup cluster
+nodes: servers 
+cluster network needs 3 company network cluster network and storage network
+cluster starage fc san or JBod or ISCSI
+witness 
+SOFS Scale-out File Services its a role u can add to a failover cluster as a file server 
+nlb cluster Network Load Balancing 
+### WSUS Windows server update services
+## windows server backup
+
+
+
+
+
 
 
