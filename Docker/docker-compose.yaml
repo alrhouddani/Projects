@@ -7,8 +7,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - ${HOME_PATH}:/data
-      - ${FB_CONFIG_PATH}:/config
+      - /root/data:/data
+      - /root/data:/config
     restart: unless-stopped
     #security_opt: 
     #- no-new-privleges:true
