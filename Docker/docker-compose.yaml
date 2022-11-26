@@ -10,5 +10,4 @@ services:
       - /root/data:/data
       - /root/data/\filebrowser.db:\database.db
     restart: unless-stopped
-    security_opt:
-      - no-new-privleges:true
+
