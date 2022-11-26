@@ -8,7 +8,7 @@ services:
       - 80:80
     volumes:
       - /root/data:/data
-      - /root/data:/config
+      - /root/data/\filebrowser.db:\database.db
     restart: unless-stopped
-    #security_opt: 
-    #- no-new-privleges:true
+    security_opt:
+      - no-new-privleges:true
