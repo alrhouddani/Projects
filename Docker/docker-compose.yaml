@@ -7,8 +7,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - \root\data:data
-      - \root\data\filebrowser.db:\database.db
+      - ${HOME_PATH}:/data
+      - ${FB_CONFIG_PATH}:/config
     restart: unless-stopped
     #security_opt: 
     #- no-new-privleges:true
